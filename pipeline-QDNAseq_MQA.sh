@@ -9,6 +9,7 @@
 	mkdir "$NAME"
 	echo "Give path (location) BAM file (exp. /home/jnys/mapping )"
 	read BAM
+	mkdir GenderDetermination
 	echo ""
 
 # Using QDNAseq R script
