@@ -4,7 +4,6 @@ CMGG
 How To Use
 
 Run the script from the directory where you want to get the output
-
 *script name: $ ./pipeline-QDNAseq_MQA.sh
 *Sample name (without .bam)
 *Give location BAM file (eg. /home/jnys/mapping)
