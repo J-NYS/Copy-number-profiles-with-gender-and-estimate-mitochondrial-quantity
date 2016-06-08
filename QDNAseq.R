@@ -82,31 +82,31 @@ args <- commandArgs(TRUE)
 # homozygous deletion < -2 < loss < -0.42 < normal < 0.32 gain < 2.32 	< amplification
 
 # Read .bed file
-  BED <- read.table(file=paste(args[1],"bed",sep="."), sep="\t", header=FALSE, skip = 1)
-  names(BED) = c("chr","start","stop","location","log2Ratio","?")
+  # BED <- read.table(file=paste(args[1],"bed",sep="."), sep="\t", header=FALSE, skip = 1)
+  # names(BED) = c("chr","start","stop","location","log2Ratio","?")
 
 # Cutoff locations
-  deletion <- BED$location[BED$log2Ratio < -2]
+  # deletion <- BED$location[BED$log2Ratio < -2]
   # deletion
 
-  loss <- BED$location[BED$log2Ratio > -2 & BED$log2Ratio < -0.42]
+  # loss <- BED$location[BED$log2Ratio > -2 & BED$log2Ratio < -0.42]
   # loss
   
-  normal <- BED$location[BED$log2Ratio > -0.42 & BED$log2Ratio < 0.32]
+  # normal <- BED$location[BED$log2Ratio > -0.42 & BED$log2Ratio < 0.32]
   # normal
   
-  gain <- BED$location[BED$log2Ratio > 0.32 & BED$log2Ratio < 2.32]
+  # gain <- BED$location[BED$log2Ratio > 0.32 & BED$log2Ratio < 2.32]
   # gain
   
-  amplification <- BED$location[BED$log2Ratio > 2.32]
+  # amplification <- BED$location[BED$log2Ratio > 2.32]
   # amplification
 
 # Write to files
-  write.table(deletion, file = "Call_deletions.txt")
-  write.table(loss, file = "Call_losses.txt")
-  write.table(normal, file = "Call_normal.txt")
-  write.table(gain, file = "Call_gains.txt")
-  write.table(amplification, file = "Call_amplifications.txt")
+  # write.table(deletion, file = "Call_deletions.txt")
+  # write.table(loss, file = "Call_losses.txt")
+  # write.table(normal, file = "Call_normal.txt")
+  # write.table(gain, file = "Call_gains.txt")
+  # write.table(amplification, file = "Call_amplifications.txt")
 
 # END R-SCRIPT_QDNAseq JNys
 print("END R-SCRIPT_QDNAseq JNys")
