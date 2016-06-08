@@ -29,5 +29,19 @@
 	mv *MitochondrialQuantityAnalyse.txt $NAME
 	echo ""
 
+# Gender Determitation
+	echo "Gender Determitation"
+#	cd $2
+	samtools view -cq 30 $1.bam X > $1sexX.txt
+	samtools view -cq 30 $1.bam Y > $1sexY.txt
+	cd -; echo $?
+	Rscript GenderDetermination.R $1 $2
+	cd $2
+	rm $1reads* $1sex*
+	cd -; echo $?
+	mv *GenderDeterminationX.txt /home/projects/PGD_Stage_Jens/resultaten/GenderDetermination	
+	mv *GenderDeterminationY.txt /home/projects/PGD_Stage_Jens/resultaten/GenderDetermination
+	echo ""
+	
 # END SCRIPT
 	echo "END SCRIPT JNys"
