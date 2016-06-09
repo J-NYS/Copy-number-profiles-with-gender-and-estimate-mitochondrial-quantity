@@ -12,14 +12,13 @@
 	echo ""
 
 # Mitochondrial Quantity analysis
-#	echo "Mitochondrial Quantity analysis"
+	echo "Mitochondrial Quantity analysis"
 	cd $2
 	samtools view -cq 30 $1.bam > $1reads.txt
 	samtools view -cq 30 $1.bam MT > $1readsMT.txt
 	cd -; echo $?
 	Rscript MitochondrialQuantityAnalyse.R $1 $2
 	cd $2
-	rm $1reads*
 	cd -; echo $?
 	mv *MitochondrialQuantityAnalyse.txt $1
 	echo ""
