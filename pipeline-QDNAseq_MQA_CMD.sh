@@ -25,7 +25,7 @@
 
 # Gender Determitation
 	echo "Gender Determitation"
-#	cd $2
+	cd $2
 	samtools view -cq 30 $1.bam X > $1sexX.txt
 	samtools view -cq 30 $1.bam Y > $1sexY.txt
 	cd -; echo $?
