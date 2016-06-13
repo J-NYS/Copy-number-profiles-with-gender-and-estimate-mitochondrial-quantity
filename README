@@ -2,13 +2,13 @@
 
 Run the script from the directory where you want to get the output
 You need the following scripts in your directory:
-*pipeline-QDNAseq_MQA_GD.sh
-*QDNAseq.R
-*MitochondrialQuantityAnalyse.R
-*GenderDetermination.R
+  *pipeline-QDNAseq_MQA_GD.sh
+  *QDNAseq.R
+  *MitochondrialQuantityAnalyse.R
+  *GenderDetermination.R
 
 When using "pipeline-QDNAseq_MQA_GD.sh" you have to run the script like this:
-$ ./pipeline-QDNAseq_MQA_GD.sh SampleName(without.bam) LocationBamFile(eg. /home/user/testdir)
+  $ ./pipeline-QDNAseq_MQA_GD.sh SampleName(without.bam) LocationBamFile(eg. /home/user/testdir)
 
 ### Example
-./pipeline-QDNAseq_MQA_GD.sh Testfile /home/user/testdir
+  ./pipeline-QDNAseq_MQA_GD.sh Testfile /home/user/testdir
